@@ -1,0 +1,101 @@
+PID,PName,Size,Price,Category
+9,Cotton-blend Joggers,XS,863,pants
+13,Billabong Outsider ski pant,L,840,pants
+14,Joggers High Waist,S,141,pants
+18,Creased Pants,M,120,pants
+19,Ankle-length Slacks,M,800,pants
+32,Faux Leather Pants,L,400,pants
+41,Wide-cut Jeans,XS,718,pants
+48,Corduroy Pants,XL,919,pants
+54,Fine-knit Joggers,M,426,pants
+59,Wide-cut Pants,M,108,pants
+70,MAMA Cotton-blend Joggers,M,753,pants
+72,Twill Cargo Pants,XS,304,pants
+73,Fine-knit Pants,S,364,pants
+78,Oversized Joggers,S,549,pants
+86,Straight-legged Joggers,M,902,pants
+90,Suit Pants,XL,803,pants
+11,Slim Fit Easy-iron Shirt,XL,530,shirts
+16,Slim Fit T-shirts,L,306,shirts
+21,Cotton Shirts,XL,524,shirts
+37,Jersey Shirts,S,681,shirts
+39,Cotton-blend Hoodie,L,612,shirts
+53,Relaxed Fit Hoodie,S,690,shirts
+62,Wide-collared Shirt,XL,302,shirts
+63,Regular Fit Shirt,L,319,shirts
+66,Plaid Flannel Shirt,L,922,shirts
+77,Faux Leather Shirt,S,985,shirts
+79,Twill Shirt Jacket,XL,245,shirts
+84,Cotton Henley Shirts,S,884,shirts
+85,Stretch Shirt,M,564,shirts
+89,Regular Fit Corduroy Shirt,L,465,shirts
+5,Platform Boots,S,664,shoe
+17,Ankle Boots,S,308,shoe
+20,Faux Shearling-lined Boots,XS,232,shoe
+26,Platform Chelsea-style Boots,XL,790,shoe
+29,Side-zip Boots,XS,547,shoe
+34,Chukka Boots,L,167,shoe
+56,Multifunctional Boots,L,859,shoe
+60,Warm-lined Boots,XL,491,shoe
+61,Knee-high Boots,XL,538,shoe
+65,Thigh-high Sock Boots,XS,176,shoe
+69,Knee-high Leather Boots,M,783,shoe
+71,Slip-in Sandals,L,940,shoe
+75,Patent Strappy Sandals,L,853,shoe
+76,Faux Fur Slippers,S,261,shoe
+82,Chain-detail Slingbacks,S,134,shoe
+93,Pointed Flats,XL,655,shoe
+95,Canvas Sneakers,S,839,shoe
+1,Skater skirt,S,223,skirts
+2,Fitted jersey skirt,XS,155,skirts
+7,Denim pencil skirt,M,565,skirts
+22,Pleated skirt,M,824,skirts
+28,Long skirt,XL,652,skirts
+30,Slit-hem skirt,S,840,skirts
+31,Calf-length skirt,XL,323,skirts
+33,Knee-length skirt,XS,243,skirts
+35,Air tiered skirt,XL,473,skirts
+36,High split skirt,S,741,skirts
+80,Denim slit skirt,M,335,skirts
+97,Flounced skirt,M,284,skirts
+98,Short skirt with belt,XL,995,skirts
+3,V-neck wool-blend jumper,XS,734,sweater
+6,Off-the-shoulder jumper,XS,581,sweater
+23,Cable-knit jumper,M,114,sweater
+38,Polo-neck sweater,L,153,sweater
+42,Cropped cardigan,L,690,sweater
+44,Ribbed turtleneck top,L,542,sweater
+46,Oversized cardigan,L,945,sweater
+47,Jacquard-knit jumper,XS,126,sweater
+49,Fine-knit polo-neck jumper,M,155,sweater
+51,Strawberry cardigan,XL,783,sweater
+55,Yellow cardigan,L,663,sweater
+57,Caramel cropped jumper,XL,292,sweater
+58,Christmas sweater,S,321,sweater
+67,Pointelle-front jumper,L,478,sweater
+68,Floral knitted cardigan,XL,719,sweater
+83,Sequin-motif jumper,S,985,sweater
+87,Chunky-knit sweater,L,263,sweater
+88,T-rex cute sweater,S,723,sweater
+100,Rhinestone buttoned cardigan,XS,942,sweater
+4,Solidary T-shirt,M,809,T-shirt
+8,Crystal appliqué T-shirt,XL,567,T-shirt
+10,Logo cotton T-shirt,XL,301,T-shirt
+12,Ribbed high neck t-shirt,XS,301,T-shirt
+15,Rolling Stones T-shirt,S,399,T-shirt
+24,Stand collar T-shirt,XS,719,T-shirt
+25,V-neck cotton T-shirt,L,856,T-shirt
+27,Velvet top,S,874,T-shirt
+40,Flowy cotton t-shirt,M,711,T-shirt
+43,Plumeti sleeve t-shirt,XS,115,T-shirt
+45,Ramones T-shirt,M,627,T-shirt
+50,Pleated T-shirt,L,322,T-shirt
+52,Shoulder pad t-shirt,XL,241,T-shirt
+64,Ribbed T-shirt,L,635,T-shirt
+74,Puffed shoulder t-shirt,XS,610,T-shirt
+81,Rolling Stones T-shirt,XS,314,T-shirt
+91,Printed T-shirt,L,535,T-shirt
+92,Round-neck T-shirt,XL,197,T-shirt
+94,Oversized Printed T-shirt,S,842,T-shirt
+96,Wide-cut Cotton T-shirt,XS,630,T-shirt
+99,Jersey T-shirt,XL,191,T-shirt
