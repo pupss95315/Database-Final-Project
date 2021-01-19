@@ -6,7 +6,7 @@
     <title>Django Contact Form</title>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/search.css' %}"> 
 </head>  
 <body>  
@@ -14,13 +14,13 @@
     {% block content %}
     <form method="get">
         <div class="well" style="background-color:#BB3D00;">
-            <h4 style="margin-top: 0; margin-bottom: 20px; color:#FFF3EE; font-size:40px;">Search For Supplier</h4>
+            <h4 style="margin-top: 0; margin-bottom: 20px; color:#FFF3EE; font-size:40px;">Search For Product</h4>
             <div class="row">
                 <div class="form-group col-sm-4 col-md-3" style="color:#FFF3EE; font-size:25px;">
                     <div style="margin-bottom: 10px;"> 
-                        {{ filter.form.SName.label_tag}}
+                        {{ filter.form.PID.label_tag}}
                     </div>
-                    {% render_field filter.form.SName class="form-control" %}
+                    {% render_field filter.form.PID class="form-control" %}
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" style="background-color:#FFF3EE;color:#BB3D00;font-weight:bold;">
@@ -31,15 +31,21 @@
     <table class="table table-bordered" style="background-color:#FFF4C1;opacity = 0.8;font-size:20px;">
         <thead>
         <tr style="color:#BB3D00;font-weight:bold;">
-            <th>Supplier ID</th>
-            <th>Supplier Name</th>
+            <th>PID</th>
+            <th>Product Name</th>
+            <th>Product Size</th>
+            <th>Price</th>
+            <th>Catagory</th>
         </tr>
         </thead>
         <tbody>
-        {% for supplier in filter.qs %}
+        {% for product in filter.qs %}
             <tr style="color:#D94600;">
-                <td>{{ supplier.SID }}</td>
-                <td>{{ supplier.SName }}</td>
+                <td>{{ product.PID }}</td>
+                <td>{{ product.PName }}</td>
+                <td>{{ product.product_size }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.catagory }}</td>
             </tr>
         {% endfor %}
         </tbody>

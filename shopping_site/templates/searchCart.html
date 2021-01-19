@@ -7,39 +7,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-    <link rel="stylesheet" href="{% static 'css/search.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
 </head>  
 <body>  
     {% load widget_tweaks %}
     {% block content %}
-    <form method="get">
+    <form method="get" >
         <div class="well" style="background-color:#BB3D00;">
-            <h4 style="margin-top: 0; margin-bottom: 20px; color:#FFF3EE; font-size:40px;">Search For Supplier</h4>
+            <h4 style="margin-top: 0; margin-bottom: 20px; color:#FFF3EE; font-size:40px;">Search For Cart</h4>
             <div class="row">
-                <div class="form-group col-sm-4 col-md-3" style="color:#FFF3EE; font-size:25px;">
+                <div class="form-group col-sm-4 col-md-3" style="color:#FFF3EE; font-size:25px;" >
                     <div style="margin-bottom: 10px;"> 
-                        {{ filter.form.SName.label_tag}}
+                        {{ filter.form.customer.label_tag}}
                     </div>
-                    {% render_field filter.form.SName class="form-control" %}
+                    {% render_field filter.form.customer class="form-control" %}
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" style="background-color:#FFF3EE;color:#BB3D00;font-weight:bold;">
-                <span class="glyphicon glyphicon-search"></span> Search
+                <span class="glyphicon glyphicon-search"></span> 
             </button>
         </div>
     </form>
     <table class="table table-bordered" style="background-color:#FFF4C1;opacity = 0.8;font-size:20px;">
         <thead>
         <tr style="color:#BB3D00;font-weight:bold;">
-            <th>Supplier ID</th>
-            <th>Supplier Name</th>
+            <th>CartID</th>
+            <th>cart_status</th>
+            <th>customer</th>
+            <th>product</th>
         </tr>
         </thead>
         <tbody>
-        {% for supplier in filter.qs %}
+        {% for cart in filter.qs %}
             <tr style="color:#D94600;">
-                <td>{{ supplier.SID }}</td>
-                <td>{{ supplier.SName }}</td>
+                <td>{{ cart.CartID }}</td>
+                <td>{{ cart.cart_status }}</td>
+                <td>{{ cart.customer }}</td>
+                <td>{{ cart.product }}</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -47,21 +51,3 @@
     {% endblock %}
 </body>  
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,44 +1,190 @@
 from django.shortcuts import get_object_or_404, render, HttpResponseRedirect
-#from django.views.generic import TemplateView, ListView
 from django.http import HttpResponse
-#from datetime import datetime
-from .models import Supplier, Customer
-from .forms import SupplierForm, CustomerForm
+from datetime import datetime
+from .models import Supplier, Customer, Product, Cart, Order, Warehouse
+from .forms import SupplierForm, CustomerForm, ProductForm, OrderForm, WarehouseForm
 from django.db.models import Q
 from django.template import RequestContext
-from .filters import SupplierFilter
+from .filters import SupplierFilter, CartFilter, OrderFilter, WarehouseFilter, ProductFilter
 
+# add
+def addSupplier(request): 
+    form = SupplierForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    # else:
+    #     return HttpResponseRedirect("/fail") 
+    context = {'form': form}
+    return render(request, 'createSupplier.html', context)
+
+
+def addProduct(request):
+    form = ProductForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    # else:
+    #     return HttpResponseRedirect("/fail") 
+    context= {'form': form }
+    return render(request, 'createProduct.html', context)
+
+def addWarehouse(request):
+    form = WarehouseForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    # else:
+    #     return HttpResponseRedirect("/fail") 
+    context= {'form': form }
+    return render(request, 'createWarehouse.html', context)
 
 def addCustomer(request):
     form = CustomerForm(request.POST or None)
     if form.is_valid():
         form.save()
+    # else:
+    #     return HttpResponseRedirect("/fail") 
+        #return HttpResponseRedirect("/showCreatedCustomer") 
     context = {'form': form}
     return render(request, 'createCustomer.html', context)
 
 
-def addSupplier(request): 
-    form = SupplierForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {'form': form}
-    return render(request, 'createSupplier.html', context)
+
+# search
+def searchSupplier(request):
+    supplier = Supplier.objects.all()
+    supplierFilter = SupplierFilter(request.GET, queryset=supplier)
+    return render(request, 'searchSupplier.html', {'filter': supplierFilter})
+
+def searchProduct(request):
+    product = Product.objects.all()
+    productFilter = ProductFilter(request.GET, queryset=product)
+    return render(request, 'searchProduct.html', {'filter': productFilter})
+
+def searchWarehouse(request):
+    warehouse = Warehouse.objects.all()
+    warehouseFilter = WarehouseFilter(request.GET, queryset=warehouse)
+    return render(request, 'searchWarehouse.html', {'filter': warehouseFilter})
+
+def searchCart(request):
+    cart = Cart.objects.all()
+    cartFilter = CartFilter(request.GET, queryset=cart)
+    return render(request, 'searchCart.html', {'filter': cartFilter})
+
+def searchOrder(request):
+    order = Order.objects.all()
+    orderFilter = OrderFilter(request.GET, queryset=order) #queryset: query domain
+    return render(request, 'searchOrder.html', {'filter': orderFilter})
 
 
+#update
 def updateSupplier(request, id):  
     context ={} 
     obj = get_object_or_404(Supplier, SID = id) 
     form = SupplierForm(request.POST or None, instance=obj)  
     if form.is_valid(): 
         form.save() 
-        return HttpResponseRedirect("/"+id) 
+        return HttpResponseRedirect("/"+id+"/showUpdatedSupplier") 
     context["form"] = form 
-    return render(request, "updateSupplier.html", context)
+    return render(request, "update.html", context)
 
+def updateProduct(request, id):  
+    context ={} 
+    obj = get_object_or_404(Product, PID = id) 
+    form = ProductForm(request.POST or None, instance=obj)  
+    if form.is_valid(): 
+        form.save() 
+        return HttpResponseRedirect("/"+id+"/showUpdatedProduct") 
+    context["form"] = form 
+    return render(request, "update.html", context)
+
+def updateWarehouse(request, id):  
+    context ={} 
+    obj = get_object_or_404(Warehouse, WID = id) 
+    form = WarehouseForm(request.POST or None, instance=obj)  
+    if form.is_valid(): 
+        form.save() 
+        return HttpResponseRedirect("/"+id+"/showUpdatedWarehouse") 
+    context["form"] = form 
+    return render(request, "update.html", context)
+
+def updateOrder(request, id):  
+    context ={} 
+    obj = get_object_or_404(Order, OrderID = id) 
+    form = OrderForm(request.POST or None, instance=obj)  
+    if form.is_valid(): 
+        form.save() 
+        return HttpResponseRedirect("/"+id+"/showUpdatedOrder") 
+    context["form"] = form 
+    return render(request, "update.html", context)
+
+def updateCustomer(request, id):  
+    context ={} 
+    obj = get_object_or_404(Customer, CID = id) 
+    form = CustomerForm(request.POST or None, instance=obj)  
+    if form.is_valid(): 
+        form.save() 
+        return HttpResponseRedirect("/"+id+"/showUpdatedCustomer") 
+    context["form"] = form 
+    return render(request, "update.html", context)
+
+# show
 def showUpdatedSupplier(request, id): 
     context ={} 
     context["supplier"] = Supplier.objects.get(SID = id) 
     return render(request, "showUpdatedSupplier.html", context)
+
+def showUpdatedProduct(request, id): 
+    context ={} 
+    context["product"] = Product.objects.get(PID = id) 
+    return render(request, "showUpdatedProduct.html", context)
+
+def showUpdatedWarehouse(request, id): 
+    context ={} 
+    context["warehouse"] = Warehouse.objects.get(WID = id) 
+    return render(request, "showUpdatedWarehouse.html", context)
+def showUpdatedCustomer(request, id): 
+    context ={} 
+    context["customer"] = Customer.objects.get(CID = id) 
+    return render(request, "showUpdatedCustomer.html", context)
+def showUpdatedOrder(request, id): 
+    context ={} 
+    context["order"] = Order.objects.get(OrderID = id) 
+    return render(request, "showUpdatedOrder.html", context)
+
+
+# delete
+def deleteSupplier(request, id):
+    context ={} 
+    obj = get_object_or_404(Supplier, SID = id) 
+    if request.method == "POST": 
+        obj.delete() 
+        return HttpResponseRedirect("/deleteSuccessfully") 
+    return render(request, "delete.html", context) 
+
+def deleteWarehouse(request, id):
+    context ={} 
+    obj = get_object_or_404(Warehouse, WID = id) 
+    if request.method == "POST": 
+        obj.delete() 
+        return HttpResponseRedirect("/deleteSuccessfully") 
+    return render(request, "delete.html", context) 
+
+def deleteProduct(request, id):
+    context ={} 
+    obj = get_object_or_404(Product, PID = id) 
+    if request.method == "POST": 
+        obj.delete() 
+        return HttpResponseRedirect("/deleteSuccessfully") 
+    return render(request, "delete.html", context)
+
+def deleteSuccessfully(request):
+     return render(request, "deleteSuccessfully.html") 
+
+
+#fail
+
+def fail(request): 
+    return render(request, "fail.html") 
+
 
 # def updateSupplier(request, pk):  
 #     supplier = get_object_or_404(SupplierForm, pk=pk)
@@ -64,11 +210,6 @@ def showUpdatedSupplier(request, id):
 #         posts = Supplier.objects.all()
 #     context = {'form': form}
 #     return render(request, 'updateSupplier.html', context)
-
-def searchSupplier(request):
-    supplier = Supplier.objects.all()
-    supplierFilter = SupplierFilter(request.GET, queryset=supplier)
-    return render(request, 'searchSupplier.html', {'filter': supplierFilter})
 
 # def searchSupplier(request):
 #     suppliers = Supplier.objects.all()
@@ -112,7 +253,3 @@ def searchSupplier(request):
 # def salesReport(request):
 
 # def lookUpCost(request):
-
-
-def hello_world(request):
-    return HttpResponse("Hello World!")

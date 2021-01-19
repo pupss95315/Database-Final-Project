@@ -1,4 +1,5 @@
 <!DOCTYPE html>  
+{% load static %}
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
@@ -6,55 +7,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
 </head>  
 <body>  
     <form method="POST" class="post-form" action="#">  
-    {% csrf_token %}  
         <div class="container">  
             <div class="form-group">
-                <label for="CID" class="control-label col-sm-2">CID</label>
+                <label for="CID" class="control-label col-sm-2" style="color:#FFECEC">ID</label>
                 <div class="col-sm-10">
                     <input type="text" name="CID" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="Password" class="control-label col-sm-2">Password</label>
+                <label for="Password" class="control-label col-sm-2" style="color:#FFECEC">Password</label>
                 <div class="col-sm-10">
                     <input type="text" name="Password" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="Firstname" class="control-label col-sm-2">Firstname</label>
+                <label for="Firstname" class="control-label col-sm-2" style="color:#FFECEC">First name</label>
                 <div class="col-sm-10">
                     <input type="text" name="Firstname" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="Lastname" class="control-label col-sm-2">Lastname</label>
+                <label for="Lastname" class="control-label col-sm-2" style="color:#FFECEC">Last name</label>
                 <div class="col-sm-10">
                     <input type="text" name="Lastname" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="Gender" class="control-label col-sm-2">Gender</label>
+                <label for="Gender" class="control-label col-sm-2" style="color:#FFECEC">Gender</label>
                 <div class="col-sm-10">
                     <input type="text" name="Gender" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="BDate" class="control-label col-sm-2">BDate</label>
+                <label for="BDate" class="control-label col-sm-2" style="color:#FFECEC">Birth Date</label>
                 <div class="col-sm-10">
                     <input type="date" name="BDate" value=""/>
                 </div>
-            </div> 
-            <div class="form-group">
-                <label for="City" class="control-label col-sm-2">City</label>
+                <label for="City" class="control-label col-sm-2" style="color:#FFECEC">City</label>
                 <div class="col-sm-10">
                     <input type="text" name="City" value=""/>
                 </div>
             </div> 
             <div class="form-group">
-                <button type="submit" class="btn btn-default">Submit</button> 
+                <button type="submit" class="btn btn-default" style="color:#AE0000; font-weight: bold;">Submit</button> 
             </div>
         </div> 
     </form>  

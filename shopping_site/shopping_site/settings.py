@@ -109,3 +109,7 @@ SILENCED_SYSTEM_CHECKS = [
     'admin.E409',
     'admin.E410',
 ]
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)

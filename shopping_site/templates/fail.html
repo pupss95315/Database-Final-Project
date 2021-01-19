@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+{% load static %}
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Django Contact Form</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+</head>  
+<body>   
+    {% csrf_token %} 
+    <div style="font-weight: bold; font-size: 100px; color:#FFDAC8; margin-left:50px; margin-bottom:20px;"> 
+        Fail.
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color:#FFF3EE;margin-left:50px;">
+        <a href="#" style="color:#BB3D00;font-weight:bold;">Return(回到首頁)</a>
+    </button>
+</body>  
+</html>

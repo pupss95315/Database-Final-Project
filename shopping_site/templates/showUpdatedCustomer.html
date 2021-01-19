@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+{% load static %} 
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Django Contact Form</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/showUpdate.css' %}">
+</head>  
+
+<body>  
+    <table align="center" border="3" width="1100">
+        <caption style="font-weight: bold; font-size: 30px; color: #424200;">Update Result</caption>
+        <tr style="background-color: #642100;" class="align-self-center">
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> ID </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Password </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Firstname </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Lastname </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Gender </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Birth Date </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> City </th>
+        </tr>
+        <tr style="background-color: #FFD2D2;" class="align-self-center">
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.CID }} </td> 	
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Password }} </td>
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Firstname }} </td>
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Lastname }} </td>
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Gender }} </td>
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.BDate }} </td>
+            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.City }} </td>
+        </tr>
+    </table>
+     
+</body>  
+</html>
