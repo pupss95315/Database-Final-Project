@@ -22,10 +22,12 @@ def addProduct(request):
     form = ProductForm(request.POST or None)
     if form.is_valid():
         form.save()
-    # else:
-    #     return HttpResponseRedirect("/fail") 
-    context= {'form': form }
-    return render(request, 'createProduct.html', context)
+        context= {'form': form }
+        return render(request, 'createProduct.html', context)
+    else:
+        return render(request, "fail.html") 
+    
+    
 
 def addWarehouse(request):
     form = WarehouseForm(request.POST or None)
