@@ -12,8 +12,8 @@ def addSupplier(request):
     form = SupplierForm(request.POST or None)
     if form.is_valid():
         form.save()
-    # else:
-    #     return HttpResponseRedirect("/fail") 
+    if request.method == "POST":
+        return HttpResponseRedirect("/addSuccessfully") 
     context = {'form': form}
     return render(request, 'createSupplier.html', context)
 
@@ -22,10 +22,10 @@ def addProduct(request):
     form = ProductForm(request.POST or None)
     if form.is_valid():
         form.save()
-        context= {'form': form }
-        return render(request, 'createProduct.html', context)
-    else:
-        return render(request, "fail.html") 
+    if request.method == "POST":
+        return HttpResponseRedirect("/addSuccessfully") 
+    context= {'form': form }
+    return render(request, 'createProduct.html', context)
     
     
 
@@ -33,8 +33,8 @@ def addWarehouse(request):
     form = WarehouseForm(request.POST or None)
     if form.is_valid():
         form.save()
-    # else:
-    #     return HttpResponseRedirect("/fail") 
+    if request.method == "POST":
+        return HttpResponseRedirect("/addSuccessfully") 
     context= {'form': form }
     return render(request, 'createWarehouse.html', context)
 
@@ -42,11 +42,18 @@ def addCustomer(request):
     form = CustomerForm(request.POST or None)
     if form.is_valid():
         form.save()
-    # else:
-    #     return HttpResponseRedirect("/fail") 
-        #return HttpResponseRedirect("/showCreatedCustomer") 
+    if request.method == "POST":
+        return HttpResponseRedirect("/index") 
     context = {'form': form}
     return render(request, 'createCustomer.html', context)
+
+# def deleteSupplier(request, id):
+#     context ={} 
+#     obj = get_object_or_404(Supplier, SID = id) 
+#     if request.method == "POST": 
+#         obj.delete() 
+#         return HttpResponseRedirect("/deleteSuccessfully") 
+#     return render(request, "delete.html", context) 
 
 
 
@@ -187,6 +194,41 @@ def deleteSuccessfully(request):
 def fail(request): 
     return render(request, "fail.html") 
 
+def index(request): 
+    return render(request, "index.html") 
+
+def member_page(request): 
+    return render(request, "member_page.html") 
+
+def employee(request): 
+    return render(request, "employee.html") 
+
+def deleteInput_supplier(request): 
+    return render(request, "deleteInput_supplier.html") 
+
+def deleteInput_warehouse(request): 
+    return render(request, "deleteInput_warehouse.html") 
+
+def deleteInput_product(request): 
+    return render(request, "deleteInput_product.html") 
+
+def update_supplier(request): 
+    return render(request, "update_supplier.html") 
+
+def update_warehouse(request): 
+    return render(request, "update_warehouse.html") 
+
+def update_product(request): 
+    return render(request, "update_product.html") 
+
+def update_customer(request): 
+    return render(request, "update_customer.html") 
+
+def update_order(request): 
+    return render(request, "update_order.html") 
+
+def addSuccessfully(request): 
+    return render(request, "addSuccessfully.html") 
 
 # def updateSupplier(request, pk):  
 #     supplier = get_object_or_404(SupplierForm, pk=pk)

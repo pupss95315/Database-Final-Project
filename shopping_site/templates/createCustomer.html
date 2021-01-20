@@ -3,7 +3,7 @@
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <title>Django Contact Form</title>  
+    <title>Register</title>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
@@ -11,6 +11,7 @@
 </head>  
 <body>  
     <form method="POST" class="post-form" action="#">  
+    {% csrf_token %} 
         <div class="container">  
             <div class="form-group">
                 <label for="CID" class="control-label col-sm-2" style="color:#FFECEC">ID</label>
@@ -43,9 +44,15 @@
                 </div>
             </div> 
             <div class="form-group">
-                <button type="submit" class="btn btn-default" style="color:#AE0000; font-weight: bold;">Submit</button> 
+                <button type="submit" id="submitbutton" class="btn btn-default" style="color:#AE0000; font-weight: bold;">Submit</button> 
             </div>
         </div> 
-    </form>  
+    </form>
+    <script>
+        var button = document.getElementById("submitbutton");
+        button.onclick = function() {
+            alert("register successfully!")
+        }
+    </script>
 </body>  
 </html>

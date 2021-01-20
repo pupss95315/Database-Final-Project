@@ -3,7 +3,7 @@
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <title>Django Contact Form</title>  
+    <title>Add Product</title>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
@@ -11,6 +11,7 @@
 </head>  
 <body>  
     <form method="POST" class="post-form" action="#">  
+    {% csrf_token %}  
         <div class="container">  
             <div class="form-group">
                 <label for="PID" class="control-label col-sm-2" style="color:#FFECEC">PID</label>
@@ -35,8 +36,9 @@
                 </div>
             </div> 
             <div class="form-group">
-                <button type="submit" class="btn btn-default" style="color:#AE0000; font-weight: bold;">Submit</button> 
+                <button type="submit" class="btn btn-default" style="color:#AE0000; font-weight: bold;" onclick=""> Submit</button> 
             </div>
+            <input type="button" class="btn btn-default" value="Return" style="color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/employee'">
         </div> 
     </form>  
 </body>  

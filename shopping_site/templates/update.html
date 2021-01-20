@@ -12,8 +12,12 @@
 <body>  
     <form method="POST"> 
         {% csrf_token %} 
-        {{form.as_p}} 
-        <input type="submit" value="Update"> 
+        <div style="font-size: 20px;margin-bottom: 20px;">
+            {{form.as_p}} 
+        </div>
+        <input type="submit" value="Update" style="font-size: 20px;font-weight:bold;padding:5px; margin-bottom:10px;"> <br>
+        
+        <input type="button" class="btn btn-default" value="Cancel" style="color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/employee'">
     </form>
 </body>  
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    	<meta charset="UTF-8">  
+		<title>Member Page</title>  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+		<link rel="stylesheet" href="{% static 'css/all.css' %}">
+    </head>
+	<body>
+		<form name ="log in page" id="log in" action="#"> 
+	    <div>
+	    	<h3 style="font-weight:bold; font-size: 30px; margin-bottom: 10px;">Log in and start your shopping journey!</h3>
+			<div style="font-size: 20px;">
+				<h4 style="margin-bottom: 5px;">Enter your customer ID: </h4>
+				<input style="margin-bottom: 5px;" type='number' name='CID' id='CID'/>
+				<h4 style="margin-bottom: 5px;">Enter your password: </h4>
+				<input style="margin-bottom: 5px;" type='text' name='pswrd' id='pswrd'/>
+				</br>
+				<input type='submit' id='submitbutton' name='log_in_request' value='log in'/>
+			</div>
+
+			<script>
+				var button = document.getElementById("submitbutton");
+				button.onclick = function() {
+					alert("log in successfully!")
+					//setTimeout(, 3000);
+					window.location.assign('http://127.0.0.1:8000/member_page'); 
+					window.event.returnValue = false;
+				}
+			</script>
+
+			</div>
+			</br>
+	    	<h4>Don't have an account?</h4>
+	    	<h4 style="margin-bottom: 5px;">No worries! Get one free!</h4>
+	    	<input type="button" name="register" value="register" onclick="window.location.assign('http://127.0.0.1:8000/addCustomer/')">
+	    </div> 
+	    </form>
+		<!-- register (password, fstname, lastname, gender, bdate, address) -->
+	    <!-- log_in (CID, password) -->
+	</body>
+</html>

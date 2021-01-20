@@ -11,7 +11,7 @@ class CustomerForm(forms.ModelForm):
 class SupplierForm(forms.ModelForm):
     class Meta:
         model = Supplier
-        fields = ["SName"]
+        fields = ["SName", "SID"]
 
 class ProductForm(forms.ModelForm):
     class Meta:

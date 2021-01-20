@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>  
+		<meta charset="UTF-8">  
+		<title>Django Contact Form</title>  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+		<link rel="stylesheet" href="{% static 'css/all.css' %}">
+	</head>  
+	<body>
+		<form name ="service_list" id="service_list" action="#" style="font-weight:bold;"> 
+	    	<div style="font-size:30px;margin-bottom: 20px;">
+				Select the service you want：
+			</div>
+			<div style="font-size:20px;">
+				<select onchange="location.href=this.options[this.selectedIndex].value">
+					<option value="#">---</option>
+					<option value="http://127.0.0.1:8000/searchCart/">Lookup my cart</option>
+					<option value="http://127.0.0.1:8000/searchOrder/">Lookup the order</option>
+					<option value="http://127.0.0.1:8000/update_customer">Update user data</option>
+				</select>
+			</div>
+		</form>
+		<!-- cart_lookup (CID) -->
+	    <!-- order_lookup (CID) -->
+	    <!-- place_order (cartID, quantity, transaction_price) -->
+	</body>
+</html>

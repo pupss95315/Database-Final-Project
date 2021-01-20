@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>  
+    <meta charset="UTF-8">  
+    <title>Django Contact Form</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  </head>  
+  <body>
+    <h4 style="font-weight:bold;font-size:35px;margin-bottom: 20px;">Type supplier ID: </h4>
+    <!--select>
+      <option>Product</option>
+      <option>Supplier</option>
+      <option>Warehouse</option>
+    </select-->
+    <!--form action='' name='delete' id="deleteform" method='POST'>
+      {% csrf_token %}
+      <input type='number' name='itemID' id="itemID">
+      <button action='submit'>Delete item</button>
+    </form-->
+    <!--h4>Enter ID for the item: </h4>
+    <input type='number' name='ID' id='ID'/>
+    </br></br>
+    <input type='submit' name = 'send_add_request' value='add' onclick="sendAddRequest();"/-->
+    
+    <!--script src="path-to-jquery">
+    // Shorthand for $(document).ready();
+      $(function() {
+        $('#deleteform').submit(function(){
+          var itemID = $('#itemID').val();
+          $(this).attr('action', "http://127.0.0.1:8000/" + itemID + "/deleteSupplier");
+        });
+      });
+    </script-->
+
+    <form>
+      <label for="testInput">
+        <input type="text" placeholder="please enter here." id="testInput" />
+        <button class="submitBtn">SUBMIT</button>
+        <button type="reset">RESET</button>
+      </label>
+      <br>
+      <input type="button" class="btn btn-default" value="Return" style="color:#AE0000; font-weight: bold;margin-top: 20px;" onclick="javascript:location.href='http://127.0.0.1:8000/employee'">
+    </form>
+
+    <script language="javascript">
+      var testInput = document.getElementById("testInput");
+      var submitBtn = document.querySelector(".submitBtn");
+      var str = "";
+      function FsubmitBtn(value) {
+        var submitValue = testInput.value;
+        str = submitValue;
+        var url = "http://127.0.0.1:8000/";
+        var url2 = "/deleteSupplier";
+        url = url + str + url2;
+        window.location.assign(url); 
+        window.event.returnValue = false;
+          
+      }
+      submitBtn.addEventListener("click", FsubmitBtn);
+      
+      
+    </script>
+<!--"http://127.0.0.1:8000/"+str+"/deleteSupplier"><-->
+
+  </body>
+</html>

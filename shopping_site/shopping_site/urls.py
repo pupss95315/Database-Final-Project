@@ -19,12 +19,17 @@ from catalog.views import searchSupplier, searchProduct, searchWarehouse, search
 from catalog.views import updateSupplier, updateProduct, updateWarehouse, updateCustomer, updateOrder
 from catalog.views import showUpdatedSupplier, showUpdatedProduct, showUpdatedWarehouse, showUpdatedCustomer, showUpdatedOrder 
 from catalog.views import deleteSupplier, deleteProduct, deleteWarehouse,  deleteSuccessfully, fail
+from catalog.views import index, member_page, employee, addSuccessfully
+from catalog.views import deleteInput_supplier, deleteInput_warehouse, deleteInput_product 
+from catalog.views import update_supplier, update_warehouse, update_product, update_customer, update_order
 from django.urls import path 
 # from catalog.views import hello_world
 # from catalog.views import 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^index/', index),
+    url(r'^member_page/', member_page),
 
     url(r'^addSupplier/$', addSupplier),
     url(r'^addProduct/$', addProduct),
@@ -54,7 +59,18 @@ urlpatterns = [
     path('<id>/showUpdatedCustomer', showUpdatedCustomer), 
     path('<id>/showUpdatedOrder', showUpdatedOrder), 
 
+
     url(r'^fail/$', fail),
+    path('employee', employee), 
+    path('deleteInput_supplier', deleteInput_supplier),
+    path('deleteInput_product', deleteInput_product),
+    path('deleteInput_warehouse', deleteInput_warehouse),
+    path('update_supplier', update_supplier),
+    path('update_product', update_product),
+    path('update_warehouse', update_warehouse),
+    path('update_customer', update_customer),
+    path('update_order', update_order),
+    path('addSuccessfully', addSuccessfully),
 
     #path('showCreatedCustomer', showCreatedCustomer),
     #url(r'^showSearch/$', searchSupplier),

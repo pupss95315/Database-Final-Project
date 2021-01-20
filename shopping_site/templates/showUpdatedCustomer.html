@@ -10,29 +10,29 @@
     <link rel="stylesheet" href="{% static 'css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/showUpdate.css' %}">
 </head>  
-
 <body>  
-    <table align="center" border="3" width="1100">
-        <caption style="font-weight: bold; font-size: 30px; color: #424200;">Update Result</caption>
-        <tr style="background-color: #642100;" class="align-self-center">
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> ID </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Password </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Firstname </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Lastname </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Gender </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> Birth Date </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 50px; padding-top:5px;"> City </th>
+    <table align="center" border="3" width="800" style="margin-bottom: 20px;">
+        <caption style="font-weight: bold; font-size: 30px; color: #642100;  margin-bottom: 20px;">Update Result</caption>
+        <tr style="background-color: #642100;">
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> ID </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Password </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Firstname </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Lastname </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Gender </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Birthday </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> City </th>
         </tr>
-        <tr style="background-color: #FFD2D2;" class="align-self-center">
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.CID }} </td> 	
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Password }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Firstname }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Lastname }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.Gender }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.BDate }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 50px; padding-top:5px;"> {{ customer.City }} </td>
+        <tr style="background-color: #FFD2D2;">
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.CID }} </td> 	
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.Password }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.Firstname }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.Lastname }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.Gender }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.BDate }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ customer.City }} </td>
         </tr>
     </table>
-     
+    <input type="button" class="btn btn-default" value="Return" style="margin-left:240px;color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/member_page'">
+    
 </body>  
 </html>

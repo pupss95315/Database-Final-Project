@@ -11,26 +11,26 @@
     <link rel="stylesheet" href="{% static 'css/showUpdate.css' %}">
 </head>  
 <body>  
-    <table align="center" border="3" width="800">
-        <caption style="font-weight: bold; font-size: 30px; color: #642100;">Update Result</caption>
+    <table align="center" border="3" width="800" style="margin-bottom: 20px;">
+        <caption style="font-weight: bold; font-size: 30px; color: #642100;  margin-bottom: 20px;">Update Result</caption>
         <tr style="background-color: #642100;">
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Order ID </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Order status </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Order date </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Cart </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Quantity </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Transaction Price </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Order ID </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Order Status </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Order date </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Cart </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Quantity </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Transaction price </th>
         </tr>
         <tr style="background-color: #FFD2D2;">
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.OrderID }} </td> 	
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.order_status }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.order_date }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.cart }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.quantity }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ order.transaction_price }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.OrderID }} </td> 	
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.order_status }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.order_date }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.cart }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.quantity }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ order.transaction_price }} </td>
         </tr>
     </table>
-     
+    <input type="button" class="btn btn-default" value="Return" style="margin-left:240px;color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/employee'">
     
 </body>  
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>  
+    <meta charset="UTF-8">  
+    <title>Employee Page</title>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+	</head>  
+	<body>
+		<form name ="main_function_list" id="main_function_list" action="#"> 
+		<div>
+			<h4 style="font-weight: bold;font-size: 40px; margin-bottom:20px;">Select the action: </h4>
+			    <select style="font-size:20px;" onchange="location.href=this.options[this.selectedIndex].value">
+				  <option value="#">---</option>
+			      <option value="http://127.0.0.1:8000/searchProduct/">Look up product</option>
+			      <option value="http://127.0.0.1:8000/searchWarehouse/">Look up warehouse</option>
+			      <option value="http://127.0.0.1:8000/searchSupplier/">Look up supplier</option>
+				  <option value="http://127.0.0.1:8000/addProduct/">Add product</option>
+				  <option value="http://127.0.0.1:8000/addWarehouse/">Add warehouse</option>
+				  <option value="http://127.0.0.1:8000/addSupplier/">Add supplier</option>
+				  <option value="http://127.0.0.1:8000/deleteInput_product">Delete product</option>
+				  <option value="http://127.0.0.1:8000/deleteInput_warehouse">Delete warehouse</option>
+				  <option value="http://127.0.0.1:8000/deleteInput_supplier">Delete supplier</option>
+				  <option value="http://127.0.0.1:8000/update_product">Update product</option>
+				  <option value="http://127.0.0.1:8000/update_warehouse">Update warehouse</option>
+				  <option value="http://127.0.0.1:8000/update_supplier">Update supplier</option>
+				  <option value="http://127.0.0.1:8000/update_order">Update order</option>
+			    </select>
+			</br></br>
+			    
+			<!--h4>Here's what you can do: </h4>
+			<p>Look up for informations: 
+				<input type="button" name="go_look_up" value="Look Up" onclick="window.open('file:///C:/Users/pinjun%20Liu/Desktop/%E4%B8%89%E4%B8%8A/DB/DatabaseProject_ShoppingWebsite/employee_add.html')">
+			</p>
+			<p>Add records: 
+				<input type="button" name="go_add" value="Add" onclick="window.open('file:///C:/Users/pinjun%20Liu/Desktop/%E4%B8%89%E4%B8%8A/DB/DatabaseProject_ShoppingWebsite/employee_add.html')">
+			</p>
+			<p>Delete records: 
+				<input type="button" name="go_delete" value="Delete" onclick="window.open('file:///C:/Users/pinjun%20Liu/Desktop/%E4%B8%89%E4%B8%8A/DB/DatabaseProject_ShoppingWebsite/employee_add.html')">
+			</p>
+			<p>Modify records: 
+				<input type="button" name="go_modify" value="Modify" onclick="window.open('file:///C:/Users/pinjun%20Liu/Desktop/%E4%B8%89%E4%B8%8A/DB/DatabaseProject_ShoppingWebsite/employee_add.html')">
+			</p-->
+		</div> 
+		</form>
+	</body>
+</html>

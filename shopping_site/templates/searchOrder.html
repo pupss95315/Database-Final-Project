@@ -26,6 +26,7 @@
             <button type="submit" class="btn btn-primary"  style="background-color:#FFF3EE;color:#BB3D00;font-weight:bold;">
                 <span class="glyphicon glyphicon-search"></span> Search
             </button>
+            <input type="button" class="btn btn-default" value="Return" style="color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/member_page'">
         </div>
     </form>
     <table class="table table-bordered" style="background-color:#FFF4C1;opacity = 0.8;font-size:20px;">
@@ -40,15 +41,20 @@
         </tr>
         </thead>
         <tbody>
+        <div>
+            
+        </div>
         {% for order in filter.qs %}
             <tr style="color:#D94600;">
                 <td>{{ order.OrderID }}</td>
                 <td>{{ order.order_status }}</td>
                 <td>{{ order.order_date }}</td>
+                <td>{{ order.cart }}</td>
                 <td>{{ order.quantity }}</td>
                 <td>{{ order.transaction_price}}</td>
             </tr>
         {% endfor %}
+        
         </tbody>
     </table>
     {% endblock %}

@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="{% static 'css/showUpdate.css' %}">
 </head>  
 <body>  
-    <table align="center" border="3" width="800">
-        <caption style="font-weight: bold; font-size: 30px; color: #642100;">Update Result</caption>
+    <table align="center" border="3" width="800" style="margin-bottom: 20px;">
+        <caption style="font-weight: bold; font-size: 30px; color: #642100;  margin-bottom: 20px;">Update Result</caption>
         <tr style="background-color: #642100;">
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> PID </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> PName </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Product size </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Price </th>
-            <th style="height:50px;width:200px;color: #FFE6D9;padding-left: 40px; padding-top:10px;"> Category </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> PID </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> PName </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Product size </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Price </th>
+            <th style="height:50px;width:200px;color: #FFE6D9;font-size: 25px;padding-left: 40px; padding-top:10px;"> Category </th>
         </tr>
         <tr style="background-color: #FFD2D2;">
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ product.PID }} </td> 	
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ product.PName }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ product.product_size }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ product.price }} </td>
-            <td style="height:70px;width:200px;color: #D94600;padding-left: 40px; padding-top:10px;"> {{ product.catagory }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ product.PID }} </td> 	
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ product.PName }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ product.product_size }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ product.price }} </td>
+            <td style="height:70px;width:200px;color: #D94600;font-size: 25px;padding-left: 40px; padding-top:10px;"> {{ product.catagory }} </td>
         </tr>
     </table>
-     
+    <input type="button" class="btn btn-default" value="Return" style="margin-left:240px;color:#AE0000; font-weight: bold;" onclick="javascript:location.href='http://127.0.0.1:8000/employee'">
     
 </body>  
 </html>
