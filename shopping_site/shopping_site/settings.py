@@ -25,8 +25,6 @@ SECRET_KEY = 'cc17&d^ynl43^+_vq4ab--%t_o*mdkfz3p0-8rq43csfk&8am-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -113,3 +111,6 @@ SILENCED_SYSTEM_CHECKS = [
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+ALLOWED_HOSTS = [
+    'git.heroku.com/shoppingsitefinalproject.git/'
+]
